@@ -9,12 +9,14 @@
     :root {
       --bg: #0b0d10;
       --panel: #13171c;
+      --panel-2: #1b2129;
       --text: #f4f7fb;
       --muted: #b2bcc9;
       --accent: #f0a500;
       --line: rgba(255,255,255,0.08);
       --max: 1180px;
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
     body {
@@ -24,76 +26,270 @@
       color: var(--text);
       line-height: 1.55;
     }
+
     a { color: inherit; text-decoration: none; }
     img { display: block; width: 100%; height: auto; }
-    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
     .nav {
-      position: sticky; top: 0; z-index: 100;
+      position: sticky;
+      top: 0;
+      z-index: 100;
       backdrop-filter: blur(10px);
       background: rgba(11,13,16,0.82);
       border-bottom: 1px solid var(--line);
     }
+
     .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 0; gap: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 20px;
     }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .02em; }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
     .brand-badge {
-      width: 42px; height: 42px; border-radius: 12px;
-      border: 1px solid rgba(240,165,0,.35);
-      background: linear-gradient(135deg, rgba(240,165,0,.16), rgba(255,255,255,.03));
-      display: grid; place-items: center; color: var(--accent); font-weight: 800;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      border: 1px solid rgba(240,165,0,0.35);
+      background: linear-gradient(135deg, rgba(240,165,0,0.16), rgba(255,255,255,0.03));
+      display: grid;
+      place-items: center;
+      color: var(--accent);
+      font-weight: 800;
     }
-    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: .95rem; }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
     .hero {
-      position: relative; min-height: 76vh; display: flex; align-items: center;
-      background: linear-gradient(180deg, rgba(11,13,16,.48), rgba(11,13,16,.92)), url('images/hero.jpg') center/cover no-repeat;
+      position: relative;
+      min-height: 76vh;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(180deg, rgba(11,13,16,0.48), rgba(11,13,16,0.92)),
+        url('images/hero.jpg') center/cover no-repeat;
     }
+
     .hero-grid {
-      display: grid; grid-template-columns: 1.2fr .8fr; gap: 28px; align-items: end; padding: 72px 0;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: end;
+      padding: 72px 0;
     }
+
     .eyebrow {
-      display: inline-block; margin-bottom: 16px; padding: 6px 10px; border: 1px solid rgba(240,165,0,.28);
-      border-radius: 999px; color: var(--accent); background: rgba(240,165,0,.08); font-size: .85rem;
+      display: inline-block;
+      margin-bottom: 16px;
+      padding: 6px 10px;
+      border: 1px solid rgba(240,165,0,0.28);
+      border-radius: 999px;
+      color: var(--accent);
+      background: rgba(240,165,0,0.08);
+      font-size: 0.85rem;
     }
-    h1 { margin: 0 0 14px; font-size: clamp(2.3rem, 5vw, 4.8rem); line-height: .98; letter-spacing: -.03em; max-width: 760px; }
-    .hero p { max-width: 700px; color: var(--muted); font-size: 1.06rem; margin: 0 0 24px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2.3rem, 5vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      max-width: 760px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.06rem;
+      margin: 0 0 24px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     .btn {
-      display: inline-flex; align-items: center; justify-content: center; min-height: 46px;
-      padding: 0 18px; border-radius: 12px; font-weight: 600; border: 1px solid var(--line); transition: .2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      border: 1px solid var(--line);
+      transition: 0.2s ease;
     }
-    .btn-primary { background: var(--accent); color: #111; border-color: transparent; }
-    .btn-secondary { background: rgba(255,255,255,.03); color: var(--text); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+      border-color: transparent;
+    }
+
+    .btn-secondary {
+      background: rgba(255,255,255,0.03);
+      color: var(--text);
+    }
+
     .hero-card {
-      background: rgba(19,23,28,.8); border: 1px solid var(--line); border-radius: 20px; padding: 22px;
-      box-shadow: 0 10px 40px rgba(0,0,0,.25);
+      background: rgba(19,23,28,0.8);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 22px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.25);
     }
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
-    .stat { background: rgba(255,255,255,.03); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
-    .stat strong { display: block; font-size: 1.5rem; margin-bottom: 4px; }
-    section { padding: 72px 0; border-top: 1px solid var(--line); }
-    .section-head { display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; margin-bottom: 28px; align-items: end; }
-    .section-head h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.8rem); letter-spacing: -.03em; }
-    .section-head p { margin: 0; color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
-    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
-    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
-    .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
-    .gallery figure { margin: 0; overflow: hidden; border-radius: 18px; border: 1px solid var(--line); background: var(--panel); }
-    .gallery img { aspect-ratio: 4/3; object-fit: cover; }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 4px;
+    }
+
+    section {
+      padding: 72px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      margin-bottom: 28px;
+      align-items: end;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .gallery figure {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+
+    .gallery img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
     .span-6 { grid-column: span 6; }
     .span-4 { grid-column: span 4; }
-    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .contact-card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
-    .contact-list { display: grid; gap: 12px; color: var(--muted); }
-    .contact-list strong { color: var(--text); display: block; margin-bottom: 3px; }
-    footer { padding: 28px 0 48px; color: var(--muted); font-size: .93rem; }
-    .logo-block { display:flex; align-items:center; gap:16px; margin-bottom: 20px; }
-    .logo-mark { width:72px; height:72px; border-radius:18px; object-fit:cover; border:1px solid var(--line); background:#111; }
+
+    .contact {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .contact-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 22px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      color: var(--muted);
+    }
+
+    .contact-list strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    footer {
+      padding: 28px 0 48px;
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
     @media (max-width: 960px) {
-      .hero-grid, .section-head, .contact, .cards { grid-template-columns: 1fr; }
+      .hero-grid,
+      .section-head,
+      .contact,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
       .gallery { grid-template-columns: 1fr; }
       .span-6, .span-4 { grid-column: auto; }
     }
@@ -120,26 +316,37 @@
       <div>
         <span class="eyebrow">Motorcycle Dyno & ECU Tuning</span>
         <h1>Real motorcycle performance, measured and tuned on the dyno.</h1>
-        <p>Independent workshop in Samarkand focused on dyno testing, performance diagnostics, and ECU calibration for modern sport, naked, touring, and custom motorcycles.</p>
+        <p>
+          Independent workshop in Samarkand focused on dyno testing, performance diagnostics,
+          and ECU calibration for modern sport, naked, touring, and custom motorcycles.
+        </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Contact Us</a>
           <a class="btn btn-secondary" href="#gallery">View Workshop</a>
         </div>
       </div>
       <div class="hero-card">
-        <div class="logo-block">
-          <img src="images/logo.jpg" alt="SMK Performance Lab logo concept" class="logo-mark" />
-          <div>
-            <strong style="font-size:1.1rem; display:block; margin-bottom:6px;">SMK Performance Lab</strong>
-            <span style="color:var(--muted)">Dyno-based tuning and diagnostics</span>
-          </div>
+        <strong style="font-size:1.1rem; display:block; margin-bottom:8px;">Workshop Focus</strong>
+        <div style="color: var(--muted);">
+          Dyno-based tuning, AFR-supported diagnostics, and preparation for professional ECU calibration workflows.
         </div>
-        <div style="color: var(--muted);">Dyno-based tuning, AFR-supported diagnostics, and preparation for professional ECU calibration workflows.</div>
         <div class="stats">
-          <div class="stat"><strong>Dyno</strong>Fully calibrated motorcycle setup</div>
-          <div class="stat"><strong>AFR</strong>Wideband-supported testing workflow</div>
-          <div class="stat"><strong>Sport</strong>Superbikes, naked bikes, tourers</div>
-          <div class="stat"><strong>ECU</strong>Expanding flash tuning capability</div>
+          <div class="stat">
+            <strong>Dyno</strong>
+            Fully calibrated motorcycle setup
+          </div>
+          <div class="stat">
+            <strong>AFR</strong>
+            Wideband-supported testing workflow
+          </div>
+          <div class="stat">
+            <strong>Sport</strong>
+            Superbikes, naked bikes, tourers
+          </div>
+          <div class="stat">
+            <strong>ECU</strong>
+            Expanding flash tuning capability
+          </div>
         </div>
       </div>
     </div>
@@ -149,13 +356,28 @@
     <div class="container">
       <div class="section-head">
         <h2>About SMK Performance Lab</h2>
-        <p>We are an independent motorcycle workshop based in Samarkand. Our work combines mechanical expertise, dyno testing, and performance-focused diagnostics to deliver reliable real-world results.</p>
+        <p>
+          We are an independent motorcycle workshop based in Samarkand. Our work combines mechanical expertise,
+          dyno testing, and performance-focused diagnostics to deliver reliable real-world results.
+        </p>
       </div>
       <div class="cards">
-        <div class="card"><h3>Independent Workshop</h3><p>Focused on motorcycles, practical engineering, and performance-oriented service.</p></div>
-        <div class="card"><h3>Dyno Testing</h3><p>Power runs, baseline checks, and measured validation after modifications.</p></div>
-        <div class="card"><h3>AFR Diagnostics</h3><p>Air-fuel analysis as part of a consistent dyno workflow.</p></div>
-        <div class="card"><h3>ECU Tuning</h3><p>Currently expanding professional ECU calibration and flashing capabilities.</p></div>
+        <div class="card">
+          <h3>Independent Workshop</h3>
+          <p>Focused on motorcycles, practical engineering, and performance-oriented service.</p>
+        </div>
+        <div class="card">
+          <h3>Dyno Testing</h3>
+          <p>Power runs, baseline checks, and measured validation after modifications.</p>
+        </div>
+        <div class="card">
+          <h3>AFR Diagnostics</h3>
+          <p>Air-fuel analysis as part of a consistent dyno workflow.</p>
+        </div>
+        <div class="card">
+          <h3>ECU Tuning</h3>
+          <p>Currently expanding professional ECU calibration and flashing capabilities.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -164,13 +386,27 @@
     <div class="container">
       <div class="section-head">
         <h2>Services</h2>
-        <p>Practical performance services for riders who want numbers, not guesses.</p>
+        <p>
+          Practical performance services for riders who want numbers, not guesses.
+        </p>
       </div>
       <div class="cards">
-        <div class="card"><h3>Dyno Power Runs</h3><p>Measure horsepower and torque, compare before/after, and verify real output.</p></div>
-        <div class="card"><h3>Performance Diagnostics</h3><p>Detect fueling, response, and delivery issues under load.</p></div>
-        <div class="card"><h3>Fuel Map Optimization</h3><p>Calibration workflow prepared for efficient AFR-based tuning sessions.</p></div>
-        <div class="card"><h3>ECU Flash Preparation</h3><p>Professional setup for modern ECU tuning across selected motorcycle platforms.</p></div>
+        <div class="card">
+          <h3>Dyno Power Runs</h3>
+          <p>Measure horsepower and torque, compare before/after, and verify real output.</p>
+        </div>
+        <div class="card">
+          <h3>Performance Diagnostics</h3>
+          <p>Detect fueling, response, and delivery issues under load.</p>
+        </div>
+        <div class="card">
+          <h3>Fuel Map Optimization</h3>
+          <p>Calibration workflow prepared for efficient AFR-based tuning sessions.</p>
+        </div>
+        <div class="card">
+          <h3>ECU Flash Preparation</h3>
+          <p>Professional setup for modern ECU tuning across selected motorcycle platforms.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -179,7 +415,9 @@
     <div class="container">
       <div class="section-head">
         <h2>Workshop & Dyno Gallery</h2>
-        <p>Real workshop photos, dyno runs, and current motorcycle projects.</p>
+        <p>
+          Real workshop photos, dyno runs, and current motorcycle projects.
+        </p>
       </div>
       <div class="gallery">
         <figure class="span-6"><img src="images/hero.jpg" alt="Motorcycle on dyno at SMK Performance Lab" /></figure>
@@ -198,21 +436,42 @@
     <div class="container">
       <div class="section-head">
         <h2>Contact</h2>
-        <p>Workshop based in Samarkand, Uzbekistan. Website launched for trade, partnership, and client communication.</p>
+        <p>
+          Workshop based in Samarkand, Uzbekistan. Professional motorcycle dyno testing and ECU tuning services.
+        </p>
       </div>
       <div class="contact">
         <div class="contact-card">
           <div class="contact-list">
-            <div><strong>Business Name</strong>SMK Performance Lab</div>
-            <div><strong>Location</strong>Samarkand, Uzbekistan</div>
-            <div><strong>Specialization</strong>Motorcycle dyno testing, diagnostics, and ECU tuning</div>
+            <div>
+              <strong>Business Name</strong>
+              SMK Performance Lab
+            </div>
+            <div>
+              <strong>Address</strong>
+              Firdousi street, 51<br>
+              Samarkand, Uzbekistan
+            </div>
+            <div>
+              <strong>Specialization</strong>
+              Motorcycle dyno testing, diagnostics, and ECU tuning
+            </div>
           </div>
         </div>
         <div class="contact-card">
           <div class="contact-list">
-            <div><strong>Email</strong>info@smkperformancelab.com</div>
-            <div><strong>Instagram</strong>@smkperformancelab</div>
-            <div><strong>Trade Inquiries</strong>Professional dyno and ECU tuning partnerships welcome</div>
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:info@smkperformancelab.com">info@smkperformancelab.com</a>
+            </div>
+            <div>
+              <strong>Phone</strong>
+              <a href="tel:+998904733010">+998 90 473 30 10</a>
+            </div>
+            <div>
+              <strong>Trade Inquiries</strong>
+              Professional dyno and ECU tuning partnerships welcome
+            </div>
           </div>
         </div>
       </div>
@@ -220,7 +479,9 @@
   </section>
 
   <footer>
-    <div class="container">© 2026 SMK Performance Lab. Motorcycle Dyno & ECU Tuning.</div>
+    <div class="container">
+      © 2026 SMK Performance Lab. Motorcycle Dyno & ECU Tuning.
+    </div>
   </footer>
 </body>
 </html>
