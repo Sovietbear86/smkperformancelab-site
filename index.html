@@ -247,6 +247,174 @@
   };
 </script>
 <script src="https://smk-ai-agent-533809864888.us-central1.run.app/static/widget/smk-chat-widget.js"></script>
+<script>
+  // SMK desktop launcher override: isolated so rollback is one-block removal.
+  (function () {
+    const desktopMedia = window.matchMedia("(min-width: 961px)");
+
+    function applyLauncherVariant() {
+      const launcher = document.querySelector(".smk-chat-launcher");
+      if (!launcher) return false;
+
+      launcher.setAttribute("aria-label", "Open SMK assistant");
+      launcher.title = "SMK Assistant";
+
+      if (desktopMedia.matches) {
+        launcher.classList.add("smk-chat-launcher-desktop");
+        launcher.innerHTML =
+          '<span class="smk-chat-launcher-orb"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /></span>';
+      } else {
+        launcher.classList.remove("smk-chat-launcher-desktop");
+        launcher.textContent = "💬";
+      }
+
+      return true;
+    }
+
+    const style = document.createElement("style");
+    style.innerHTML = `
+      .smk-chat-launcher.smk-chat-launcher-desktop {
+        width: 104px;
+        height: 104px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: transparent;
+        box-shadow: 0 20px 42px rgba(0, 0, 0, 0.42);
+        overflow: visible;
+        isolation: isolate;
+        animation: smkLauncherFloat 4.8s ease-in-out infinite;
+      }
+
+      .smk-chat-launcher.smk-chat-launcher-desktop:hover {
+        transform: translateY(-2px) scale(1.04);
+      }
+
+      .smk-chat-launcher.smk-chat-launcher-desktop:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+
+      .smk-chat-launcher.smk-chat-launcher-desktop::after {
+        content: "Вызов ассистента";
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 10px);
+        transform: translateX(-50%) translateY(6px);
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(11, 13, 16, 0.94);
+        color: #f4f7fb;
+        border: 1px solid rgba(240, 165, 0, 0.24);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+        white-space: nowrap;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.22s ease, transform 0.22s ease;
+      }
+
+      .smk-chat-launcher-orb {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .smk-chat-launcher-orb::before,
+      .smk-chat-launcher-orb::after {
+        content: "";
+        position: absolute;
+        inset: -4px;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+
+      .smk-chat-launcher-orb::before {
+        background:
+          radial-gradient(circle at 50% 52%, rgba(255, 208, 102, 0.62) 0%, rgba(255, 208, 102, 0.22) 26%, rgba(255, 208, 102, 0) 60%),
+          conic-gradient(from 0deg, rgba(255, 209, 102, 0.08), rgba(255, 209, 102, 0.36), rgba(214, 40, 40, 0.2), rgba(255, 209, 102, 0.08));
+        filter: blur(9px);
+        opacity: 1;
+        animation: smkLauncherSpin 9s linear infinite;
+      }
+
+      .smk-chat-launcher-orb::after {
+        inset: 8px;
+        background:
+          radial-gradient(circle at 34% 24%, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 34%),
+          radial-gradient(circle at 50% 60%, rgba(255, 210, 120, 0.28), rgba(255, 210, 120, 0) 54%);
+        mix-blend-mode: screen;
+        filter: blur(3px);
+        animation: smkLauncherPulse 3.8s ease-in-out infinite;
+      }
+
+      .smk-chat-launcher-art {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        pointer-events: none;
+        filter: drop-shadow(0 0 18px rgba(240, 165, 0, 0.36));
+      }
+
+      @keyframes smkLauncherSpin {
+        from {
+          transform: rotate(0deg) scale(0.98);
+        }
+        to {
+          transform: rotate(360deg) scale(1.02);
+        }
+      }
+
+      @keyframes smkLauncherPulse {
+        0%, 100% {
+          opacity: 0.62;
+          transform: scale(0.96);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.04);
+        }
+      }
+
+      @keyframes smkLauncherFloat {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-2px);
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    function initOverride() {
+      if (applyLauncherVariant()) return;
+
+      const observer = new MutationObserver(function () {
+        if (applyLauncherVariant()) {
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.body, { childList: true, subtree: true });
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", initOverride);
+    } else {
+      initOverride();
+    }
+
+    desktopMedia.addEventListener("change", applyLauncherVariant);
+  })();
+</script>
 
 </body>
 </html>
