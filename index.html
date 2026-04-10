@@ -265,7 +265,8 @@
           '<span class="smk-chat-launcher-orb"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /></span>';
       } else {
         launcher.classList.remove("smk-chat-launcher-desktop");
-        launcher.textContent = "💬";
+        launcher.innerHTML =
+          '<span class="smk-chat-launcher-orb smk-chat-launcher-orb-mobile"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /></span>';
       }
 
       return true;
@@ -389,6 +390,57 @@
         }
         50% {
           transform: translateY(-2px);
+        }
+      }
+
+      @media (max-width: 960px) {
+        .smk-chat-launcher {
+          width: 72px !important;
+          height: 72px !important;
+          padding: 0 !important;
+          border: 0 !important;
+          border-radius: 50% !important;
+          background: transparent !important;
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32) !important;
+          overflow: visible !important;
+        }
+
+        .smk-chat-launcher-orb-mobile {
+          position: relative;
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+
+        .smk-chat-launcher-orb-mobile::before,
+        .smk-chat-launcher-orb-mobile::after {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          pointer-events: none;
+        }
+
+        .smk-chat-launcher-orb-mobile::before {
+          inset: -3px;
+          background:
+            radial-gradient(circle at 50% 52%, rgba(255, 208, 102, 0.42) 0%, rgba(255, 208, 102, 0.12) 28%, rgba(255, 208, 102, 0) 62%),
+            conic-gradient(from 0deg, rgba(255, 209, 102, 0.04), rgba(255, 209, 102, 0.22), rgba(214, 40, 40, 0.12), rgba(255, 209, 102, 0.04));
+          filter: blur(6px);
+          animation: smkLauncherSpin 11s linear infinite;
+        }
+
+        .smk-chat-launcher-orb-mobile::after {
+          inset: 7px;
+          background:
+            radial-gradient(circle at 34% 24%, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0) 34%),
+            radial-gradient(circle at 50% 60%, rgba(255, 210, 120, 0.2), rgba(255, 210, 120, 0) 54%);
+          filter: blur(2px);
+          animation: smkLauncherPulse 4.2s ease-in-out infinite;
+        }
+
+        .smk-chat-launcher-orb-mobile .smk-chat-launcher-art {
+          filter: drop-shadow(0 0 12px rgba(240, 165, 0, 0.26));
         }
       }
     `;
