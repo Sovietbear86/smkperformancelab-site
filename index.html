@@ -3,92 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMK Performance Lab – Motorcycle Dyno & ECU Tuning in Samarkand</title>
-  <meta name="description" content="Motorcycle dyno tuning, ECU flashing and diagnostics in Samarkand. Woolich Racing ECU tuning, AFR tuning, performance upgrades." />
+  <title id="page-title">SMK Performance Lab - Motorcycle Dyno & ECU Tuning in Samarkand</title>
+  <meta id="meta-description" name="description" content="Motorcycle dyno tuning, ECU flashing and diagnostics in Samarkand. Woolich Racing ECU tuning, AFR tuning, performance upgrades." />
   <meta name="keywords" content="motorcycle tuning, dyno tuning, ECU flashing, Woolich Racing, Samarkand motorcycle service, AFR tuning, bike tuning Uzbekistan" />
   <meta name="author" content="SMK Performance Lab" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.smkperformancelab.com/" />
-  <meta property="og:title" content="SMK Performance Lab – Motorcycle Dyno & ECU Tuning" />
-  <meta property="og:description" content="Professional motorcycle dyno tuning and ECU calibration in Samarkand." />
+  <meta id="og-title" property="og:title" content="SMK Performance Lab - Motorcycle Dyno & ECU Tuning" />
+  <meta id="og-description" property="og:description" content="Professional motorcycle dyno tuning and ECU calibration in Samarkand." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.smkperformancelab.com/" />
   <meta property="og:image" content="https://www.smkperformancelab.com/images/hero.jpg" />
   <style>
-    :root {
-      --bg: #0b0d10;
-      --panel: #13171c;
-      --panel-2: #1b2129;
-      --text: #f4f7fb;
-      --muted: #b2bcc9;
-      --accent: #f0a500;
-      --line: rgba(255,255,255,0.08);
-      --max: 1180px;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: Inter, Arial, Helvetica, sans-serif; background: var(--bg); color: var(--text); line-height: 1.55; }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; height: auto; }
-    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
-    .nav { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(10px); background: rgba(11,13,16,0.82); border-bottom: 1px solid var(--line); }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; gap: 20px; }
-    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: 0.02em; }
-    .brand-badge { width: 42px; height: 42px; border-radius: 12px; border: 1px solid rgba(240,165,0,0.35); background: linear-gradient(135deg, rgba(240,165,0,0.16), rgba(255,255,255,0.03)); display: grid; place-items: center; color: var(--accent); font-weight: 800; }
-    .nav-links { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 0.95rem; }
-    .hero { position: relative; min-height: 76vh; display: flex; align-items: center; background: linear-gradient(180deg, rgba(11,13,16,0.48), rgba(11,13,16,0.92)), url('images/hero.jpg') center/cover no-repeat; }
-    .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 28px; align-items: end; padding: 72px 0; }
-    .eyebrow { display: inline-block; margin-bottom: 16px; padding: 6px 10px; border: 1px solid rgba(240,165,0,0.28); border-radius: 999px; color: var(--accent); background: rgba(240,165,0,0.08); font-size: 0.85rem; }
-    h1 { margin: 0 0 14px; font-size: clamp(2.3rem, 5vw, 4.8rem); line-height: 0.98; letter-spacing: -0.03em; max-width: 760px; }
-    .hero p { max-width: 700px; color: var(--muted); font-size: 1.06rem; margin: 0 0 24px; }
-    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 18px; border-radius: 12px; font-weight: 600; border: 1px solid var(--line); transition: 0.2s ease; }
-    .btn-primary { background: var(--accent); color: #111; border-color: transparent; }
-    .btn-secondary { background: rgba(255,255,255,0.03); color: var(--text); }
-    .hero-card { background: rgba(19,23,28,0.8); border: 1px solid var(--line); border-radius: 20px; padding: 22px; box-shadow: 0 10px 40px rgba(0,0,0,0.25); }
-    .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-top: 18px; }
-    .stat { background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 16px; padding: 16px; }
-    .stat strong { display: block; font-size: 1.5rem; margin-bottom: 4px; }
-    section { padding: 72px 0; border-top: 1px solid var(--line); }
-    .section-head { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 24px; margin-bottom: 28px; align-items: end; }
-    .section-head h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.8rem); letter-spacing: -0.03em; }
-    .section-head p { margin: 0; color: var(--muted); }
-    .cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-    .card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 20px; }
-    .card h3 { margin: 0 0 8px; font-size: 1.05rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-    .gallery { display: grid; grid-template-columns: repeat(12, 1fr); gap: 14px; }
-    .gallery figure, .storefront { margin: 0; overflow: hidden; border-radius: 18px; border: 1px solid var(--line); background: var(--panel); }
-    .gallery img { aspect-ratio: 4 / 3; object-fit: cover; }
-    .span-6 { grid-column: span 6; }
-    .span-4 { grid-column: span 4; }
-    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .contact-card { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; padding: 22px; }
-    .contact-list { display: grid; gap: 12px; color: var(--muted); }
-    .contact-list strong { color: var(--text); display: block; margin-bottom: 3px; }
-    .storefront-wrap { margin-top: 18px; }
-    .storefront img { aspect-ratio: 16 / 9; object-fit: cover; }
-    .storefront figcaption { padding: 12px 14px 16px; color: var(--muted); font-size: 0.95rem; }
-    footer { padding: 28px 0 48px; color: var(--muted); font-size: 0.93rem; }
-    @media (max-width: 960px) {
-      .hero-grid, .section-head, .contact, .cards { grid-template-columns: 1fr; }
-      .gallery { grid-template-columns: 1fr; }
-      .span-6, .span-4 { grid-column: auto; }
-    }
+    :root { --bg:#0b0d10; --panel:#13171c; --text:#f4f7fb; --muted:#b2bcc9; --accent:#f0a500; --line:rgba(255,255,255,.08); --max:1180px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Inter,Arial,Helvetica,sans-serif; background:var(--bg); color:var(--text); line-height:1.55; }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; width:100%; height:auto; }
+    .container { width:min(calc(100% - 32px), var(--max)); margin:0 auto; }
+    .nav { position:sticky; top:0; z-index:100; backdrop-filter:blur(10px); background:rgba(11,13,16,.82); border-bottom:1px solid var(--line); }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:14px 0; }
+    .brand { display:flex; align-items:center; gap:12px; font-weight:700; letter-spacing:.02em; }
+    .brand-badge { width:42px; height:42px; border-radius:12px; border:1px solid rgba(240,165,0,.35); background:linear-gradient(135deg, rgba(240,165,0,.16), rgba(255,255,255,.03)); display:grid; place-items:center; color:var(--accent); font-weight:800; }
+    .nav-side { display:flex; align-items:center; gap:18px; flex-wrap:wrap; justify-content:flex-end; }
+    .nav-links { display:flex; gap:18px; flex-wrap:wrap; color:var(--muted); font-size:.95rem; }
+    .lang-switch { display:inline-flex; align-items:center; gap:10px; padding:7px 10px; border:1px solid rgba(240,165,0,.18); border-radius:12px; background:rgba(255,255,255,.03); }
+    .lang-switch label { font-size:.88rem; font-weight:600; }
+    .lang-switch select { border:0; background:transparent; color:var(--text); font:inherit; outline:none; cursor:pointer; }
+    .lang-switch option { color:#111; }
+    .hero { min-height:76vh; display:flex; align-items:center; background:linear-gradient(180deg, rgba(11,13,16,.48), rgba(11,13,16,.92)), url("images/hero.jpg") center/cover no-repeat; }
+    .hero-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:end; padding:72px 0; }
+    .eyebrow { display:inline-block; margin-bottom:16px; padding:6px 10px; border:1px solid rgba(240,165,0,.28); border-radius:999px; color:var(--accent); background:rgba(240,165,0,.08); font-size:.85rem; }
+    h1 { margin:0 0 14px; font-size:clamp(2.3rem,5vw,4.8rem); line-height:.98; letter-spacing:-.03em; max-width:760px; }
+    .hero p { max-width:700px; color:var(--muted); font-size:1.06rem; margin:0 0 24px; }
+    .hero-actions { display:flex; gap:12px; flex-wrap:wrap; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; min-height:46px; padding:0 18px; border-radius:12px; font-weight:600; border:1px solid var(--line); }
+    .btn-primary { background:var(--accent); color:#111; border-color:transparent; }
+    .btn-secondary { background:rgba(255,255,255,.03); }
+    .hero-card,.card,.contact-card,.gallery figure,.storefront { background:var(--panel); border:1px solid var(--line); border-radius:18px; }
+    .hero-card { padding:22px; box-shadow:0 10px 40px rgba(0,0,0,.25); }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:18px; }
+    .stat { background:rgba(255,255,255,.03); border:1px solid var(--line); border-radius:16px; padding:16px; }
+    .stat strong { display:block; font-size:1.5rem; margin-bottom:4px; }
+    section { padding:72px 0; border-top:1px solid var(--line); }
+    .section-head { display:grid; grid-template-columns:.9fr 1.1fr; gap:24px; margin-bottom:28px; align-items:end; }
+    .section-head h2 { margin:0; font-size:clamp(1.7rem,3vw,2.8rem); letter-spacing:-.03em; }
+    .section-head p,.card p,.contact-list,.storefront figcaption,.seo-copy,footer { color:var(--muted); }
+    .cards { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+    .card { padding:20px; }
+    .card h3 { margin:0 0 8px; font-size:1.05rem; }
+    .gallery { display:grid; grid-template-columns:repeat(12,1fr); gap:14px; }
+    .gallery figure,.storefront { margin:0; overflow:hidden; }
+    .gallery img { aspect-ratio:4/3; object-fit:cover; }
+    .span-6 { grid-column:span 6; }
+    .span-4 { grid-column:span 4; }
+    .contact { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .contact-card { padding:22px; }
+    .contact-list { display:grid; gap:12px; }
+    .contact-list strong { color:var(--text); display:block; margin-bottom:3px; }
+    .storefront-wrap { margin-top:18px; }
+    .storefront img { aspect-ratio:16/9; object-fit:cover; }
+    .storefront figcaption { padding:12px 14px 16px; font-size:.95rem; }
+    footer { padding:28px 0 48px; font-size:.93rem; }
+    @media (max-width:960px) { .nav-inner,.nav-side { flex-direction:column; align-items:flex-start; } .nav-side { width:100%; gap:14px; } .lang-switch { width:100%; justify-content:space-between; } .hero-grid,.section-head,.contact,.cards { grid-template-columns:1fr; } .gallery { grid-template-columns:1fr; } .span-6,.span-4 { grid-column:auto; } }
   </style>
 </head>
 <body>
   <nav class="nav">
     <div class="container nav-inner">
-      <a class="brand" href="#top">
-        <div class="brand-badge">SMK</div>
-        <div>SMK Performance Lab</div>
-      </a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
+      <a class="brand" href="#top"><div class="brand-badge">SMK</div><div>SMK Performance Lab</div></a>
+      <div class="nav-side">
+        <div class="nav-links">
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#services" data-i18n="nav.services">Services</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="lang-switch">
+          <label for="language-select" data-i18n="lang.label">Language</label>
+          <select id="language-select" aria-label="Language selector">
+            <option value="en">English</option>
+            <option value="ru">Русский</option>
+            <option value="uz">O'zbekcha</option>
+          </select>
+        </div>
       </div>
     </div>
   </nav>
@@ -96,27 +95,22 @@
   <header class="hero" id="top">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">Motorcycle Dyno & ECU Tuning</span>
-        <h1>Motorcycle Dyno & ECU Tuning in Samarkand</h1>
-        <p>
-          Independent workshop in Samarkand focused on dyno testing, performance diagnostics,
-          and ECU calibration for modern sport, naked, touring, and custom motorcycles.
-        </p>
+        <span class="eyebrow" data-i18n="hero.eyebrow">Motorcycle Dyno & ECU Tuning</span>
+        <h1 data-i18n="hero.title">Motorcycle Dyno & ECU Tuning in Samarkand</h1>
+        <p data-i18n="hero.copy">Independent workshop in Samarkand focused on dyno testing, performance diagnostics, and ECU calibration for modern sport, naked, touring, and custom motorcycles.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Contact Us</a>
-          <a class="btn btn-secondary" href="#gallery">View Workshop</a>
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.cta1">Contact Us</a>
+          <a class="btn btn-secondary" href="#gallery" data-i18n="hero.cta2">View Workshop</a>
         </div>
       </div>
       <div class="hero-card">
-        <strong style="font-size:1.1rem; display:block; margin-bottom:8px;">Workshop Focus</strong>
-        <div style="color: var(--muted);">
-          Dyno-based tuning, AFR-supported diagnostics, and preparation for professional ECU calibration workflows.
-        </div>
+        <strong style="font-size:1.1rem;display:block;margin-bottom:8px" data-i18n="focus.title">Workshop Focus</strong>
+        <div style="color:var(--muted)" data-i18n="focus.copy">Dyno-based tuning, AFR-supported diagnostics, and preparation for professional ECU calibration workflows.</div>
         <div class="stats">
-          <div class="stat"><strong>Dyno</strong>Fully calibrated motorcycle setup</div>
-          <div class="stat"><strong>AFR</strong>Wideband-supported testing workflow</div>
-          <div class="stat"><strong>Sport</strong>Superbikes, naked bikes, tourers</div>
-          <div class="stat"><strong>ECU</strong>Expanding flash tuning capability</div>
+          <div class="stat"><strong data-i18n="stats.dyno.t">Dyno</strong><span data-i18n="stats.dyno.c">Fully calibrated motorcycle setup</span></div>
+          <div class="stat"><strong data-i18n="stats.afr.t">AFR</strong><span data-i18n="stats.afr.c">Wideband-supported testing workflow</span></div>
+          <div class="stat"><strong data-i18n="stats.sport.t">Sport</strong><span data-i18n="stats.sport.c">Superbikes, naked bikes, tourers</span></div>
+          <div class="stat"><strong data-i18n="stats.ecu.t">ECU</strong><span data-i18n="stats.ecu.c">Expanding flash tuning capability</span></div>
         </div>
       </div>
     </div>
@@ -125,17 +119,14 @@
   <section id="about">
     <div class="container">
       <div class="section-head">
-        <h2>About SMK Performance Lab</h2>
-        <p>
-          We are an independent motorcycle workshop based in Samarkand. Our work combines mechanical expertise,
-          dyno testing, and performance-focused diagnostics to deliver reliable real-world results.
-        </p>
+        <h2 data-i18n="about.title">About SMK Performance Lab</h2>
+        <p data-i18n="about.copy">We are an independent motorcycle workshop based in Samarkand. Our work combines mechanical expertise, dyno testing, and performance-focused diagnostics to deliver reliable real-world results.</p>
       </div>
       <div class="cards">
-        <div class="card"><h3>Independent Workshop</h3><p>Focused on motorcycles, practical engineering, and performance-oriented service.</p></div>
-        <div class="card"><h3>Dyno Testing</h3><p>Power runs, baseline checks, and measured validation after modifications.</p></div>
-        <div class="card"><h3>AFR Diagnostics</h3><p>Air-fuel analysis as part of a consistent dyno workflow.</p></div>
-        <div class="card"><h3>ECU Tuning</h3><p>Currently expanding professional ECU calibration and flashing capabilities.</p></div>
+        <div class="card"><h3 data-i18n="about.c1t">Independent Workshop</h3><p data-i18n="about.c1c">Focused on motorcycles, practical engineering, and performance-oriented service.</p></div>
+        <div class="card"><h3 data-i18n="about.c2t">Dyno Testing</h3><p data-i18n="about.c2c">Power runs, baseline checks, and measured validation after modifications.</p></div>
+        <div class="card"><h3 data-i18n="about.c3t">AFR Diagnostics</h3><p data-i18n="about.c3c">Air-fuel analysis as part of a consistent dyno workflow.</p></div>
+        <div class="card"><h3 data-i18n="about.c4t">ECU Tuning</h3><p data-i18n="about.c4c">Currently expanding professional ECU calibration and flashing capabilities.</p></div>
       </div>
     </div>
   </section>
@@ -143,14 +134,14 @@
   <section id="services">
     <div class="container">
       <div class="section-head">
-        <h2>Services</h2>
-        <p>Practical performance services for riders who want numbers, not guesses.</p>
+        <h2 data-i18n="services.title">Services</h2>
+        <p data-i18n="services.copy">Practical performance services for riders who want numbers, not guesses.</p>
       </div>
       <div class="cards">
-        <div class="card"><h3>Dyno Power Runs</h3><p>Measure horsepower and torque, compare before/after, and verify real output.</p></div>
-        <div class="card"><h3>Performance Diagnostics</h3><p>Detect fueling, response, and delivery issues under load.</p></div>
-        <div class="card"><h3>Fuel Map Optimization</h3><p>Calibration workflow prepared for efficient AFR-based tuning sessions.</p></div>
-        <div class="card"><h3>ECU Flash Preparation</h3><p>Professional setup for modern ECU tuning across selected motorcycle platforms.</p></div>
+        <div class="card"><h3 data-i18n="services.c1t">Dyno Power Runs</h3><p data-i18n="services.c1c">Measure horsepower and torque, compare before/after, and verify real output.</p></div>
+        <div class="card"><h3 data-i18n="services.c2t">Performance Diagnostics</h3><p data-i18n="services.c2c">Detect fueling, response, and delivery issues under load.</p></div>
+        <div class="card"><h3 data-i18n="services.c3t">Fuel Map Optimization</h3><p data-i18n="services.c3c">Calibration workflow prepared for efficient AFR-based tuning sessions.</p></div>
+        <div class="card"><h3 data-i18n="services.c4t">ECU Flash Preparation</h3><p data-i18n="services.c4c">Professional setup for modern ECU tuning across selected motorcycle platforms.</p></div>
       </div>
     </div>
   </section>
@@ -158,23 +149,23 @@
   <section id="gallery">
     <div class="container">
       <div class="section-head">
-        <h2>Workshop & Dyno Gallery</h2>
-        <p>Real workshop photos, dyno runs, and current motorcycle projects.</p>
+        <h2 data-i18n="gallery.title">Workshop & Dyno Gallery</h2>
+        <p data-i18n="gallery.copy">Real workshop photos, dyno runs, and current motorcycle projects.</p>
       </div>
       <div class="gallery">
-        <figure class="span-6"><img src="images/hero.jpg" alt="Motorcycle on dyno at SMK Performance Lab" /></figure>
-        <figure class="span-6"><img src="images/dyno-room.jpg" alt="Dyno room and motorcycle setup" /></figure>
-        <figure class="span-4"><img src="images/graph-1.jpg" alt="Dyno graph on screen" /></figure>
-        <figure class="span-4"><img src="images/triumph.jpg" alt="Triumph motorcycle on dyno" /></figure>
-        <figure class="span-4"><img src="images/laptop-graph.jpg" alt="Laptop showing dyno result" /></figure>
-        <figure class="span-4"><img src="images/moto1_1.JPG" alt="Workshop motorcycle project" /></figure>
-        <figure class="span-4"><img src="images/custom-bagger.jpg" alt="Custom motorcycle project" /></figure>
-        <figure class="span-4"><img src="images/moto5.JPG" alt="Ducati motorcycle in workshop" /></figure>
-        <figure class="span-4"><img src="images/bmw_1.jpg" alt="BMW project motorcycle in workshop" /></figure>
-        <figure class="span-4"><img src="images/bmw_2.jpg" alt="BMW motorcycle project detail" /></figure>
-        <figure class="span-4"><img src="images/bmw_3.jpg" alt="BMW motorcycle in SMK Performance Lab" /></figure>
-        <figure class="span-4"><img src="images/ducati_1.jpg" alt="Ducati motorcycle project in workshop" /></figure>
-        <figure class="span-4"><img src="images/ducati_2.jpg" alt="Ducati motorcycle detail at SMK Performance Lab" /></figure>
+        <figure class="span-6"><img src="images/hero.jpg" data-i18n-alt="alts.hero" alt="Motorcycle on dyno at SMK Performance Lab" /></figure>
+        <figure class="span-6"><img src="images/dyno-room.jpg" data-i18n-alt="alts.room" alt="Dyno room and motorcycle setup" /></figure>
+        <figure class="span-4"><img src="images/graph-1.jpg" data-i18n-alt="alts.graph" alt="Dyno graph on screen" /></figure>
+        <figure class="span-4"><img src="images/triumph.jpg" data-i18n-alt="alts.triumph" alt="Triumph motorcycle on dyno" /></figure>
+        <figure class="span-4"><img src="images/laptop-graph.jpg" data-i18n-alt="alts.laptop" alt="Laptop showing dyno result" /></figure>
+        <figure class="span-4"><img src="images/moto1_1.JPG" data-i18n-alt="alts.project1" alt="Workshop motorcycle project" /></figure>
+        <figure class="span-4"><img src="images/custom-bagger.jpg" data-i18n-alt="alts.bagger" alt="Custom motorcycle project" /></figure>
+        <figure class="span-4"><img src="images/moto5.JPG" data-i18n-alt="alts.moto5" alt="Ducati motorcycle in workshop" /></figure>
+        <figure class="span-4"><img src="images/bmw_1.jpg" data-i18n-alt="alts.bmw1" alt="BMW project motorcycle in workshop" /></figure>
+        <figure class="span-4"><img src="images/bmw_2.jpg" data-i18n-alt="alts.bmw2" alt="BMW motorcycle project detail" /></figure>
+        <figure class="span-4"><img src="images/bmw_3.jpg" data-i18n-alt="alts.bmw3" alt="BMW motorcycle in SMK Performance Lab" /></figure>
+        <figure class="span-4"><img src="images/ducati_1.jpg" data-i18n-alt="alts.ducati1" alt="Ducati motorcycle project in workshop" /></figure>
+        <figure class="span-4"><img src="images/ducati_2.jpg" data-i18n-alt="alts.ducati2" alt="Ducati motorcycle detail at SMK Performance Lab" /></figure>
       </div>
     </div>
   </section>
@@ -182,29 +173,29 @@
   <section id="contact">
     <div class="container">
       <div class="section-head">
-        <h2>Contact</h2>
-        <p>Workshop based in Samarkand, Uzbekistan. Professional motorcycle dyno testing and ECU tuning services.</p>
+        <h2 data-i18n="contact.title">Contact</h2>
+        <p data-i18n="contact.copy">Workshop based in Samarkand, Uzbekistan. Professional motorcycle dyno testing and ECU tuning services.</p>
       </div>
       <div class="contact">
         <div class="contact-card">
           <div class="contact-list">
-            <div><strong>Business Name</strong>SMK Performance Lab</div>
-            <div><strong>Address</strong>Firdousi street, 51<br>Samarkand, Uzbekistan</div>
-            <div><strong>Specialization</strong>Motorcycle dyno testing, diagnostics, and ECU tuning</div>
+            <div><strong data-i18n="contact.bizL">Business Name</strong><span data-i18n="contact.bizV">SMK Performance Lab</span></div>
+            <div><strong data-i18n="contact.addrL">Address</strong><span data-i18n="contact.addrV">Firdousi street, 51<br>Samarkand, Uzbekistan</span></div>
+            <div><strong data-i18n="contact.specL">Specialization</strong><span data-i18n="contact.specV">Motorcycle dyno testing, diagnostics, and ECU tuning</span></div>
           </div>
         </div>
         <div class="contact-card">
           <div class="contact-list">
-            <div><strong>Email</strong><a href="mailto:info@smkperformancelab.com">info@smkperformancelab.com</a></div>
-            <div><strong>Phone</strong><a href="tel:+998904733010">+998 90 473 30 10</a></div>
-            <div><strong>Trade Inquiries</strong>Professional dyno and ECU tuning partnerships welcome</div>
+            <div><strong data-i18n="contact.emailL">Email</strong><a href="mailto:info@smkperformancelab.com">info@smkperformancelab.com</a></div>
+            <div><strong data-i18n="contact.phoneL">Phone</strong><a href="tel:+998904733010">+998 90 473 30 10</a></div>
+            <div><strong data-i18n="contact.tradeL">Trade Inquiries</strong><span data-i18n="contact.tradeV">Professional dyno and ECU tuning partnerships welcome</span></div>
           </div>
         </div>
       </div>
       <div class="storefront-wrap">
         <figure class="storefront">
-        <img src="images/storefront_3.png" alt="SMK Performance Lab storefront" />
-          <figcaption>Workshop entrance at Firdousi street, 51.</figcaption>
+          <img src="images/storefront_3.png" data-i18n-alt="alts.storefront" alt="SMK Performance Lab storefront" />
+          <figcaption data-i18n="contact.caption">Workshop entrance at Firdousi street, 51.</figcaption>
         </figure>
       </div>
     </div>
@@ -213,335 +204,183 @@
   <section id="seo-text">
     <div class="container">
       <div class="section-head">
-        <h2>Motorcycle Tuning in Samarkand</h2>
-        <p>
-          SMK Performance Lab provides professional motorcycle dyno tuning, ECU flashing, and diagnostics in Samarkand, Uzbekistan.
-        </p>
+        <h2 data-i18n="seo.title">Motorcycle Tuning in Samarkand</h2>
+        <p data-i18n="seo.copy">SMK Performance Lab provides professional motorcycle dyno tuning, ECU flashing, and diagnostics in Samarkand, Uzbekistan.</p>
       </div>
-      <div class="contact-card">
-        <p style="margin-top:0; color: var(--muted);">
-          We specialize in motorcycle dyno runs, AFR-supported diagnostics, and ECU tuning workflows for modern sportbikes, naked bikes, and touring motorcycles.
-          Our workshop is preparing for Woolich Racing based tuning solutions, live data logging, and ECU-out flashing for selected Yamaha, BMW, Suzuki, KTM, Ducati, and Honda platforms.
-        </p>
-        <p style="margin-bottom:0; color: var(--muted);">
-          Riders looking for motorcycle dyno tuning in Samarkand, ECU flashing in Uzbekistan, or performance diagnostics for modified bikes can contact SMK Performance Lab directly through the website.
-        </p>
+      <div class="contact-card seo-copy">
+        <p style="margin-top:0" data-i18n="seo.p1">We specialize in motorcycle dyno runs, AFR-supported diagnostics, and ECU tuning workflows for modern sportbikes, naked bikes, and touring motorcycles. Our workshop is preparing for Woolich Racing based tuning solutions, live data logging, and ECU-out flashing for selected Yamaha, BMW, Suzuki, KTM, Ducati, and Honda platforms.</p>
+        <p style="margin-bottom:0" data-i18n="seo.p2">Riders looking for motorcycle dyno tuning in Samarkand, ECU flashing in Uzbekistan, or performance diagnostics for modified bikes can contact SMK Performance Lab directly through the website.</p>
       </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">© 2023 SMK Performance Lab. Motorcycle Dyno & ECU Tuning.</div>
-  </footer>
-<script>
-  window.SMKChatWidgetConfig = {
-    apiUrl: "https://smk-ai-agent-533809864888.us-central1.run.app/chat",
-    title: "SMK Performance Lab",
-    subtitle: "Диностенд • ECU • Запись",
-    primaryColor: "#111111",
-    accentColor: "#d62828",
-    position: "right",
-    welcomeMessage:
-      "Здравствуйте! Помогу с настройкой мотоцикла, подбором решения и записью на удобный слот.",
-      placeholder: "Type your message..."
-  };
-</script>
-<script src="https://smk-ai-agent-533809864888.us-central1.run.app/static/widget/smk-chat-widget.js"></script>
-<script>
-  // SMK desktop launcher override: isolated so rollback is one-block removal.
-  (function () {
-    const desktopMedia = window.matchMedia("(min-width: 961px)");
+  <footer><div class="container" data-i18n="footer">© 2023 SMK Performance Lab. Motorcycle Dyno & ECU Tuning.</div></footer>
 
-    function applyLauncherVariant() {
-      const launcher = document.querySelector(".smk-chat-launcher");
-      if (!launcher) return false;
-
-      launcher.setAttribute("aria-label", "Open SMK assistant");
-      launcher.title = "SMK Assistant";
-
-      if (desktopMedia.matches) {
-        launcher.classList.add("smk-chat-launcher-desktop");
-        launcher.innerHTML =
-          '<span class="smk-chat-launcher-orb"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /></span>';
-      } else {
-        launcher.classList.remove("smk-chat-launcher-desktop");
-        launcher.innerHTML =
-          '<span class="smk-chat-launcher-orb smk-chat-launcher-orb-mobile"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /></span>';
+  <script>
+    const SMK_I18N = {
+      en: {
+        meta:{title:"SMK Performance Lab - Motorcycle Dyno & ECU Tuning in Samarkand",desc:"Motorcycle dyno tuning, ECU flashing and diagnostics in Samarkand. Woolich Racing ECU tuning, AFR tuning, performance upgrades.",ogt:"SMK Performance Lab - Motorcycle Dyno & ECU Tuning",ogd:"Professional motorcycle dyno tuning and ECU calibration in Samarkand."},
+        lang:{label:"Language"}, nav:{about:"About",services:"Services",gallery:"Gallery",contact:"Contact"},
+        hero:{eyebrow:"Motorcycle Dyno & ECU Tuning",title:"Motorcycle Dyno & ECU Tuning in Samarkand",copy:"Independent workshop in Samarkand focused on dyno testing, performance diagnostics, and ECU calibration for modern sport, naked, touring, and custom motorcycles.",cta1:"Contact Us",cta2:"View Workshop"},
+        focus:{title:"Workshop Focus",copy:"Dyno-based tuning, AFR-supported diagnostics, and preparation for professional ECU calibration workflows."},
+        stats:{dyno:{t:"Dyno",c:"Fully calibrated motorcycle setup"},afr:{t:"AFR",c:"Wideband-supported testing workflow"},sport:{t:"Sport",c:"Superbikes, naked bikes, tourers"},ecu:{t:"ECU",c:"Expanding flash tuning capability"}},
+        about:{title:"About SMK Performance Lab",copy:"We are an independent motorcycle workshop based in Samarkand. Our work combines mechanical expertise, dyno testing, and performance-focused diagnostics to deliver reliable real-world results.",c1t:"Independent Workshop",c1c:"Focused on motorcycles, practical engineering, and performance-oriented service.",c2t:"Dyno Testing",c2c:"Power runs, baseline checks, and measured validation after modifications.",c3t:"AFR Diagnostics",c3c:"Air-fuel analysis as part of a consistent dyno workflow.",c4t:"ECU Tuning",c4c:"Currently expanding professional ECU calibration and flashing capabilities."},
+        services:{title:"Services",copy:"Practical performance services for riders who want numbers, not guesses.",c1t:"Dyno Power Runs",c1c:"Measure horsepower and torque, compare before/after, and verify real output.",c2t:"Performance Diagnostics",c2c:"Detect fueling, response, and delivery issues under load.",c3t:"Fuel Map Optimization",c3c:"Calibration workflow prepared for efficient AFR-based tuning sessions.",c4t:"ECU Flash Preparation",c4c:"Professional setup for modern ECU tuning across selected motorcycle platforms."},
+        gallery:{title:"Workshop & Dyno Gallery",copy:"Real workshop photos, dyno runs, and current motorcycle projects."},
+        contact:{title:"Contact",copy:"Workshop based in Samarkand, Uzbekistan. Professional motorcycle dyno testing and ECU tuning services.",bizL:"Business Name",bizV:"SMK Performance Lab",addrL:"Address",addrV:"Firdousi street, 51<br>Samarkand, Uzbekistan",specL:"Specialization",specV:"Motorcycle dyno testing, diagnostics, and ECU tuning",emailL:"Email",phoneL:"Phone",tradeL:"Trade Inquiries",tradeV:"Professional dyno and ECU tuning partnerships welcome",caption:"Workshop entrance at Firdousi street, 51."},
+        seo:{title:"Motorcycle Tuning in Samarkand",copy:"SMK Performance Lab provides professional motorcycle dyno tuning, ECU flashing, and diagnostics in Samarkand, Uzbekistan.",p1:"We specialize in motorcycle dyno runs, AFR-supported diagnostics, and ECU tuning workflows for modern sportbikes, naked bikes, and touring motorcycles. Our workshop is preparing for Woolich Racing based tuning solutions, live data logging, and ECU-out flashing for selected Yamaha, BMW, Suzuki, KTM, Ducati, and Honda platforms.",p2:"Riders looking for motorcycle dyno tuning in Samarkand, ECU flashing in Uzbekistan, or performance diagnostics for modified bikes can contact SMK Performance Lab directly through the website."},
+        footer:"© 2023 SMK Performance Lab. Motorcycle Dyno & ECU Tuning.",
+        alts:{hero:"Motorcycle on dyno at SMK Performance Lab",room:"Dyno room and motorcycle setup",graph:"Dyno graph on screen",triumph:"Triumph motorcycle on dyno",laptop:"Laptop showing dyno result",project1:"Workshop motorcycle project",bagger:"Custom motorcycle project",moto5:"Ducati motorcycle in workshop",bmw1:"BMW project motorcycle in workshop",bmw2:"BMW motorcycle project detail",bmw3:"BMW motorcycle in SMK Performance Lab",ducati1:"Ducati motorcycle project in workshop",ducati2:"Ducati motorcycle detail at SMK Performance Lab",storefront:"SMK Performance Lab storefront"},
+        widget:{title:"SMK Performance Lab",subtitle:"Dyno stand • ECU • Booking",placeholder:"Type your message...",welcome:"Hello! I can help with motorcycle setup, tuning options, and booking a convenient slot.",tooltip:"Call assistant",label:"Open assistant",close:"Hide",chips:["ECU tuning","Book a slot","Help me choose tuning"]}
+      },
+      ru: {
+        meta:{title:"SMK Performance Lab - Диностенд и настройка ECU в Самарканде",desc:"Настройка мотоциклов на диностенде, прошивка ECU и диагностика в Самарканде. Woolich Racing, AFR-настройка и повышение производительности.",ogt:"SMK Performance Lab - Диностенд и настройка ECU",ogd:"Профессиональная настройка мотоциклов на диностенде и калибровка ECU в Самарканде."},
+        lang:{label:"Язык"}, nav:{about:"О нас",services:"Услуги",gallery:"Галерея",contact:"Контакты"},
+        hero:{eyebrow:"Диностенд и настройка ECU для мотоциклов",title:"Диностенд и настройка ECU в Самарканде",copy:"Независимая мастерская в Самарканде, специализирующаяся на диностендовых тестах, диагностике производительности и калибровке ECU для современных спортбайков, нейкедов, туристических и кастомных мотоциклов.",cta1:"Связаться с нами",cta2:"Посмотреть мастерскую"},
+        focus:{title:"Фокус мастерской",copy:"Настройка по диностенду, диагностика с поддержкой AFR и подготовка к профессиональным ECU-калибровкам."},
+        stats:{dyno:{t:"Dyno",c:"Полностью откалиброванная мотоциклетная установка"},afr:{t:"AFR",c:"Процесс тестирования с поддержкой широкополосного датчика"},sport:{t:"Sport",c:"Супербайки, нейкеды и туреры"},ecu:{t:"ECU",c:"Расширяющиеся возможности по прошивке и настройке"}},
+        about:{title:"О SMK Performance Lab",copy:"Мы независимая мото-мастерская в Самарканде. Наша работа объединяет механическую экспертизу, диностендовые тесты и производительную диагностику для достижения стабильного результата в реальных условиях.",c1t:"Независимая мастерская",c1c:"Фокус на мотоциклах, практичной инженерии и сервисе, ориентированном на результат.",c2t:"Диностендовые тесты",c2c:"Замеры мощности, базовые проверки и подтверждение результата после модификаций.",c3t:"AFR-диагностика",c3c:"Анализ топливовоздушной смеси как часть стабильного диностендового процесса.",c4t:"Настройка ECU",c4c:"Постепенно расширяем профессиональные возможности по калибровке и прошивке ECU."},
+        services:{title:"Услуги",copy:"Практические решения по производительности для тех, кому нужны цифры, а не догадки.",c1t:"Замеры мощности на диностенде",c1c:"Измерение мощности и крутящего момента, сравнение до и после, проверка реальной отдачи.",c2t:"Диагностика производительности",c2c:"Поиск проблем со смесью, откликом и подачей под нагрузкой.",c3t:"Оптимизация топливных карт",c3c:"Рабочий процесс подготовлен для эффективных сессий настройки на основе AFR.",c4t:"Подготовка к прошивке ECU",c4c:"Профессиональная база для настройки современных ECU на выбранных платформах мотоциклов."},
+        gallery:{title:"Галерея мастерской и диностенда",copy:"Реальные фотографии мастерской, диностендовых заездов и текущих проектов."},
+        contact:{title:"Контакты",copy:"Мастерская в Самарканде, Узбекистан. Профессиональные услуги по диностенду и настройке ECU для мотоциклов.",bizL:"Название",bizV:"SMK Performance Lab",addrL:"Адрес",addrV:"ул. Фирдоуси, 51<br>Самарканд, Узбекистан",specL:"Специализация",specV:"Мото-диностенд, диагностика и настройка ECU",emailL:"Email",phoneL:"Телефон",tradeL:"Партнерские запросы",tradeV:"Открыты к профессиональному сотрудничеству по диностенду и настройке ECU",caption:"Вход в мастерскую на улице Фирдоуси, 51."},
+        seo:{title:"Настройка мотоциклов в Самарканде",copy:"SMK Performance Lab предлагает профессиональную настройку мотоциклов на диностенде, прошивку ECU и диагностику в Самарканде, Узбекистан.",p1:"Мы специализируемся на диностендовых замерах, диагностике с поддержкой AFR и рабочих процессах настройки ECU для современных спортбайков, нейкедов и туристических мотоциклов. Мастерская готовится к решениям на базе Woolich Racing, live data logging и ECU-out flashing для платформ Yamaha, BMW, Suzuki, KTM, Ducati и Honda.",p2:"Если вам нужна настройка мотоцикла на диностенде в Самарканде, прошивка ECU в Узбекистане или диагностика производительности модифицированного байка, свяжитесь с SMK Performance Lab через сайт."},
+        footer:"© 2023 SMK Performance Lab. Диностенд и настройка ECU для мотоциклов.",
+        alts:{hero:"Мотоцикл на диностенде в SMK Performance Lab",room:"Диностендовая комната и установка мотоцикла",graph:"График диностенда на экране",triumph:"Мотоцикл Triumph на диностенде",laptop:"Ноутбук с результатом диностенда",project1:"Проект мотоцикла в мастерской",bagger:"Кастомный мотоциклетный проект",moto5:"Ducati в мастерской",bmw1:"Проект BMW в мастерской",bmw2:"Деталь проекта BMW",bmw3:"BMW в SMK Performance Lab",ducati1:"Проект Ducati в мастерской",ducati2:"Деталь Ducati в SMK Performance Lab",storefront:"Фасад SMK Performance Lab"},
+        widget:{title:"SMK Performance Lab",subtitle:"Диностенд • ECU • Запись",placeholder:"Введите сообщение...",welcome:"Здравствуйте! Я помогу с настройкой мотоцикла, подбором решений и записью на удобный слот.",tooltip:"Вызов ассистента",label:"Открыть ассистента",close:"Скрыть",chips:["Настройка ECU","Записаться","Подобрать тюнинг"]}
+      },
+      uz: {
+        meta:{title:"SMK Performance Lab - Samarqandda mototsikl dynostendi va ECU sozlash",desc:"Samarqandda mototsikl dynostendi, ECU flashing va diagnostika. Woolich Racing, AFR sozlash va performance yechimlari.",ogt:"SMK Performance Lab - Mototsikl dynostendi va ECU sozlash",ogd:"Samarqandda professional mototsikl dynostendi va ECU kalibrovkasi."},
+        lang:{label:"Til"}, nav:{about:"Biz haqimizda",services:"Xizmatlar",gallery:"Galereya",contact:"Aloqa"},
+        hero:{eyebrow:"Mototsikl dynostendi va ECU sozlash",title:"Samarqandda mototsikl dynostendi va ECU sozlash",copy:"Samarqanddagi mustaqil ustaxona bo'lib, zamonaviy sport, naked, touring va custom mototsikllar uchun dyno testlari, performance diagnostikasi va ECU kalibrovkasiga ixtisoslashgan.",cta1:"Bog'lanish",cta2:"Ustaxonani ko'rish"},
+        focus:{title:"Ustaxona yo'nalishi",copy:"Dyno asosidagi sozlash, AFR bilan diagnostika va professional ECU kalibrovka jarayonlariga tayyorgarlik."},
+        stats:{dyno:{t:"Dyno",c:"To'liq kalibrlangan mototsikl stendi"},afr:{t:"AFR",c:"Wideband yordamidagi test jarayoni"},sport:{t:"Sport",c:"Superbike, naked va touring mototsikllar"},ecu:{t:"ECU",c:"Flash tuning imkoniyatlari kengaymoqda"}},
+        about:{title:"SMK Performance Lab haqida",copy:"Biz Samarqanddagi mustaqil mototsikl ustaxonasimiz. Ishimiz mexanik tajriba, dyno testlari va performance diagnostikasini birlashtirib, real sharoitda ishonchli natija beradi.",c1t:"Mustaqil ustaxona",c1c:"Mototsikl, amaliy injiniring va natijaga yo'naltirilgan servisga fokus qilingan.",c2t:"Dyno testlari",c2c:"Quvvat o'lchovlari, boshlang'ich tekshiruvlar va modifikatsiyadan keyin tasdiqlangan natija.",c3t:"AFR diagnostikasi",c3c:"Havo-yoqilg'i aralashmasi tahlili barqaror dyno jarayonining bir qismi sifatida.",c4t:"ECU sozlash",c4c:"Professional ECU kalibrovka va flashing imkoniyatlarini bosqichma-bosqich kengaytirmoqdamiz."},
+        services:{title:"Xizmatlar",copy:"Taxmin emas, aniq raqamlar kerak bo'lgan haydovchilar uchun amaliy performance xizmatlari.",c1t:"Dyno quvvat o'lchovlari",c1c:"Ot kuchi va momentni o'lchang, oldin/keyin taqqoslang va haqiqiy natijani tekshiring.",c2t:"Performance diagnostikasi",c2c:"Yuklama ostida yoqilg'i, javob va uzatish muammolarini aniqlang.",c3t:"Fuel map optimizatsiyasi",c3c:"AFR asosidagi samarali tuning sessiyalari uchun tayyorlangan kalibrovka jarayoni.",c4t:"ECU flash tayyorlov",c4c:"Tanlangan mototsikl platformalarida zamonaviy ECU tuning uchun professional tayyorgarlik."},
+        gallery:{title:"Ustaxona va dyno galereyasi",copy:"Ustaxona, dyno ishlari va joriy mototsikl loyihalarining haqiqiy suratlari."},
+        contact:{title:"Aloqa",copy:"Samarqand, O'zbekistondagi ustaxona. Mototsikl dynostendi va ECU sozlash bo'yicha professional xizmatlar.",bizL:"Korxona nomi",bizV:"SMK Performance Lab",addrL:"Manzil",addrV:"Firdousiy ko'chasi, 51<br>Samarqand, O'zbekiston",specL:"Ixtisoslashuv",specV:"Mototsikl dynostendi, diagnostika va ECU sozlash",emailL:"Email",phoneL:"Telefon",tradeL:"Hamkorlik bo'yicha murojaatlar",tradeV:"Professional dyno va ECU tuning hamkorliklariga ochiqmiz",caption:"Firdousiy ko'chasi, 51 dagi ustaxona kirish qismi."},
+        seo:{title:"Samarqandda mototsikl tuning",copy:"SMK Performance Lab Samarqandda mototsikl dynostendi, ECU flashing va diagnostika bo'yicha professional xizmat ko'rsatadi.",p1:"Biz zamonaviy sportbike, naked bike va touring mototsikllar uchun dyno o'lchovlari, AFR bilan diagnostika va ECU tuning jarayonlariga ixtisoslashganmiz. Ustaxona Woolich Racing asosidagi tuning, live data logging va Yamaha, BMW, Suzuki, KTM, Ducati hamda Honda platformalari uchun ECU-out flashing yechimlariga tayyorgarlik ko'rmoqda.",p2:"Agar sizga Samarqandda mototsikl dyno tuning, O'zbekistonda ECU flashing yoki modifikatsiya qilingan bayk uchun performance diagnostikasi kerak bo'lsa, SMK Performance Lab bilan sayt orqali bog'laning."},
+        footer:"© 2023 SMK Performance Lab. Mototsikl dynostendi va ECU sozlash.",
+        alts:{hero:"SMK Performance Lab dynosidagi mototsikl",room:"Dyno xonasi va mototsikl o'rnatilishi",graph:"Ekrandagi dyno grafik",triumph:"Dynodagi Triumph mototsikli",laptop:"Dyno natijasi ko'rsatilgan noutbuk",project1:"Ustaxonadagi mototsikl loyihasi",bagger:"Custom mototsikl loyihasi",moto5:"Ustaxonadagi Ducati mototsikli",bmw1:"Ustaxonadagi BMW loyihasi",bmw2:"BMW loyihasi detali",bmw3:"SMK Performance Labdagi BMW",ducati1:"Ustaxonadagi Ducati loyihasi",ducati2:"SMK Performance Labdagi Ducati detali",storefront:"SMK Performance Lab tashqi ko'rinishi"},
+        widget:{title:"SMK Performance Lab",subtitle:"Dynostend • ECU • Yozilish",placeholder:"Xabaringizni yozing...",welcome:"Salom! Men mototsikl sozlamasi, tyuning variantlari va qulay vaqtga yozilish bo'yicha yordam beraman.",tooltip:"Assistent chaqirish",label:"Assistentni ochish",close:"Yopish",chips:["ECU sozlash","Yozilish","Tyuning tanlash"]}
       }
+    };
+    const CHIP_MAP = {"ECU tuning":0,"Book a slot":1,"Help me choose tuning":2,"Настройка ECU":0,"Записаться":1,"Подобрать тюнинг":2,"ECU sozlash":0,"Yozilish":1,"Tyuning tanlash":2,"Интересует настройка ECU":0,"Хочу записаться":1,"Помогите подобрать тюнинг":2};
+    const initialLang = ["ru","uz"].includes(localStorage.getItem("smk_site_lang")) ? localStorage.getItem("smk_site_lang") : "en";
+    window.SMKChatWidgetConfig = { apiUrl:"https://smk-ai-agent-533809864888.us-central1.run.app/chat", title:SMK_I18N[initialLang].widget.title, subtitle:SMK_I18N[initialLang].widget.subtitle, primaryColor:"#111111", accentColor:"#d62828", position:"right", welcomeMessage:SMK_I18N[initialLang].widget.welcome, placeholder:SMK_I18N[initialLang].widget.placeholder };
+  </script>
+  <script src="https://smk-ai-agent-533809864888.us-central1.run.app/static/widget/smk-chat-widget.js"></script>
+  <script>
+    (function () {
+      let currentLang = initialLang;
+      const mq = window.matchMedia("(min-width: 961px)");
+      const widgetCss = document.createElement("style");
+      widgetCss.textContent = `
+        .smk-chat-header{position:relative;padding-right:92px}
+        .smk-chat-close{position:absolute;top:12px;right:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.08);color:#f4f7fb;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:600;cursor:pointer}
+        .smk-chat-close:hover{background:rgba(255,255,255,.14)}
+        .smk-chat-launcher.smk-chat-launcher-desktop{width:104px;height:104px;padding:0;border:0;border-radius:50%;background:transparent;box-shadow:0 20px 42px rgba(0,0,0,.42);overflow:visible;isolation:isolate;animation:smkLauncherFloat 4.8s ease-in-out infinite}
+        .smk-chat-launcher.smk-chat-launcher-desktop:hover{transform:translateY(-2px) scale(1.04)}
+        .smk-chat-launcher.smk-chat-launcher-desktop:hover .smk-chat-launcher-tooltip{opacity:1;transform:translateX(-50%) translateY(0)}
+        .smk-chat-launcher-orb{position:relative;display:block;width:100%;height:100%;border-radius:50%}
+        .smk-chat-launcher-orb::before,.smk-chat-launcher-orb::after{content:"";position:absolute;inset:-4px;border-radius:50%;pointer-events:none}
+        .smk-chat-launcher-orb::before{background:radial-gradient(circle at 50% 52%, rgba(255,208,102,.62) 0%, rgba(255,208,102,.22) 26%, rgba(255,208,102,0) 60%),conic-gradient(from 0deg, rgba(255,209,102,.08), rgba(255,209,102,.36), rgba(214,40,40,.2), rgba(255,209,102,.08));filter:blur(9px);animation:smkLauncherSpin 9s linear infinite}
+        .smk-chat-launcher-orb::after{inset:8px;background:radial-gradient(circle at 34% 24%, rgba(255,255,255,.42), rgba(255,255,255,0) 34%),radial-gradient(circle at 50% 60%, rgba(255,210,120,.28), rgba(255,210,120,0) 54%);mix-blend-mode:screen;filter:blur(3px);animation:smkLauncherPulse 3.8s ease-in-out infinite}
+        .smk-chat-launcher-art{position:relative;z-index:1;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none;filter:drop-shadow(0 0 18px rgba(240,165,0,.36))}
+        .smk-chat-launcher-tooltip{position:absolute;left:50%;bottom:calc(100% + 10px);transform:translateX(-50%) translateY(6px);padding:8px 12px;border-radius:999px;background:rgba(11,13,16,.94);color:#f4f7fb;border:1px solid rgba(240,165,0,.24);box-shadow:0 10px 28px rgba(0,0,0,.28);white-space:nowrap;font-size:13px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .22s ease,transform .22s ease}
+        @keyframes smkLauncherSpin{from{transform:rotate(0deg) scale(.98)}to{transform:rotate(360deg) scale(1.02)}}
+        @keyframes smkLauncherPulse{0%,100%{opacity:.62;transform:scale(.96)}50%{opacity:1;transform:scale(1.04)}}
+        @keyframes smkLauncherFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+        @media (max-width:960px){
+          .smk-chat-launcher{width:94px !important;height:94px !important;padding:0 !important;border:0 !important;border-radius:50% !important;background:transparent !important;box-shadow:0 14px 28px rgba(0,0,0,.32) !important;overflow:visible !important;bottom:88px !important}
+          .smk-chat-widget{width:min(320px,calc(100vw - 24px)) !important;max-width:min(320px,calc(100vw - 24px)) !important;height:min(420px,calc(100vh - 180px)) !important;max-height:min(420px,calc(100vh - 180px)) !important;right:12px !important;left:auto !important;bottom:198px !important;border-radius:20px !important}
+          .smk-chat-header{padding-right:88px}
+          .smk-chat-launcher-orb-mobile{position:relative;display:block;width:100%;height:100%;border-radius:50%}
+          .smk-chat-launcher-orb-mobile::before,.smk-chat-launcher-orb-mobile::after{content:"";position:absolute;border-radius:50%;pointer-events:none}
+          .smk-chat-launcher-orb-mobile::before{inset:-3px;background:radial-gradient(circle at 50% 52%, rgba(255,208,102,.42) 0%, rgba(255,208,102,.12) 28%, rgba(255,208,102,0) 62%),conic-gradient(from 0deg, rgba(255,209,102,.04), rgba(255,209,102,.22), rgba(214,40,40,.12), rgba(255,209,102,.04));filter:blur(6px);animation:smkLauncherSpin 11s linear infinite}
+          .smk-chat-launcher-orb-mobile::after{inset:7px;background:radial-gradient(circle at 34% 24%, rgba(255,255,255,.32), rgba(255,255,255,0) 34%),radial-gradient(circle at 50% 60%, rgba(255,210,120,.2), rgba(255,210,120,0) 54%);filter:blur(2px);animation:smkLauncherPulse 4.2s ease-in-out infinite}
+          .smk-chat-launcher-orb-mobile .smk-chat-launcher-art{filter:drop-shadow(0 0 12px rgba(240,165,0,.26))}
+          .smk-chat-launcher-tooltip{display:none}
+        }`;
+      document.head.appendChild(widgetCss);
 
-      return true;
-    }
-
-    const style = document.createElement("style");
-    style.innerHTML = `
-      .smk-chat-launcher.smk-chat-launcher-desktop {
-        width: 104px;
-        height: 104px;
-        padding: 0;
-        border: 0;
-        border-radius: 50%;
-        background: transparent;
-        box-shadow: 0 20px 42px rgba(0, 0, 0, 0.42);
-        overflow: visible;
-        isolation: isolate;
-        animation: smkLauncherFloat 4.8s ease-in-out infinite;
+      function value(path) { return path.split(".").reduce((a, k) => a && a[k], SMK_I18N[currentLang]); }
+      function setNode(node, text) { if ((text || "").includes("<br>")) node.innerHTML = text; else node.textContent = text; }
+      function syncWidgetText() {
+        window.SMKChatWidgetConfig.title = SMK_I18N[currentLang].widget.title;
+        window.SMKChatWidgetConfig.subtitle = SMK_I18N[currentLang].widget.subtitle;
+        window.SMKChatWidgetConfig.placeholder = SMK_I18N[currentLang].widget.placeholder;
+        window.SMKChatWidgetConfig.welcomeMessage = SMK_I18N[currentLang].widget.welcome;
+        const widget = document.querySelector(".smk-chat-widget");
+        if (!widget) return;
+        const title = widget.querySelector(".smk-chat-title");
+        const subtitle = widget.querySelector(".smk-chat-subtitle");
+        const input = widget.querySelector(".smk-chat-input");
+        const close = widget.querySelector(".smk-chat-close");
+        if (title) title.textContent = SMK_I18N[currentLang].widget.title;
+        if (subtitle) subtitle.textContent = SMK_I18N[currentLang].widget.subtitle;
+        if (input) input.placeholder = SMK_I18N[currentLang].widget.placeholder;
+        if (close) { close.textContent = SMK_I18N[currentLang].widget.close; close.setAttribute("aria-label", SMK_I18N[currentLang].widget.close); }
+        widget.querySelectorAll(".smk-chat-chip").forEach((chip) => {
+          const idx = CHIP_MAP[chip.textContent.trim()];
+          if (idx !== undefined) chip.textContent = SMK_I18N[currentLang].widget.chips[idx];
+        });
+        widget.querySelectorAll(".smk-chat-row.assistant .smk-chat-bubble").forEach((bubble) => {
+          const text = bubble.textContent.trim();
+          if (Object.values(SMK_I18N).some((lang) => lang.widget.welcome === text)) bubble.textContent = SMK_I18N[currentLang].widget.welcome;
+        });
       }
-
-      .smk-chat-launcher.smk-chat-launcher-desktop:hover {
-        transform: translateY(-2px) scale(1.04);
+      function localizeLauncher() {
+        const launcher = document.querySelector(".smk-chat-launcher");
+        if (!launcher) return;
+        launcher.setAttribute("aria-label", SMK_I18N[currentLang].widget.label);
+        launcher.title = SMK_I18N[currentLang].widget.label;
+        const tip = launcher.querySelector(".smk-chat-launcher-tooltip");
+        if (tip) tip.textContent = SMK_I18N[currentLang].widget.tooltip;
       }
-
-      .smk-chat-launcher.smk-chat-launcher-desktop:hover::after {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
+      function decorateWidget() {
+        const launcher = document.querySelector(".smk-chat-launcher");
+        const widget = document.querySelector(".smk-chat-widget");
+        const header = widget && widget.querySelector(".smk-chat-header");
+        if (!launcher || !widget || !header) return false;
+        const desktop = mq.matches;
+        launcher.classList.toggle("smk-chat-launcher-desktop", desktop);
+        launcher.innerHTML = desktop
+          ? '<span class="smk-chat-launcher-orb"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /><span class="smk-chat-launcher-tooltip"></span></span>'
+          : '<span class="smk-chat-launcher-orb smk-chat-launcher-orb-mobile"><img src="images/widget-launcher-orb-v2c.png" alt="" class="smk-chat-launcher-art" /></span>';
+        if (!header.querySelector(".smk-chat-close")) {
+          const btn = document.createElement("button");
+          btn.className = "smk-chat-close";
+          btn.type = "button";
+          btn.addEventListener("click", () => launcher.click());
+          header.appendChild(btn);
+        }
+        localizeLauncher();
+        syncWidgetText();
+        return true;
       }
-
-      .smk-chat-launcher.smk-chat-launcher-desktop::after {
-        content: "Вызов ассистента";
-        position: absolute;
-        left: 50%;
-        bottom: calc(100% + 10px);
-        transform: translateX(-50%) translateY(6px);
-        padding: 8px 12px;
-        border-radius: 999px;
-        background: rgba(11, 13, 16, 0.94);
-        color: #f4f7fb;
-        border: 1px solid rgba(240, 165, 0, 0.24);
-        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
-        white-space: nowrap;
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 0.01em;
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.22s ease, transform 0.22s ease;
+      function applyLanguage() {
+        document.documentElement.lang = currentLang;
+        document.getElementById("page-title").textContent = SMK_I18N[currentLang].meta.title;
+        document.getElementById("meta-description").setAttribute("content", SMK_I18N[currentLang].meta.desc);
+        document.getElementById("og-title").setAttribute("content", SMK_I18N[currentLang].meta.ogt);
+        document.getElementById("og-description").setAttribute("content", SMK_I18N[currentLang].meta.ogd);
+        document.querySelectorAll("[data-i18n]").forEach((n) => setNode(n, value(n.dataset.i18n)));
+        document.querySelectorAll("[data-i18n-alt]").forEach((n) => n.alt = value(n.dataset.i18nAlt));
+        document.getElementById("language-select").value = currentLang;
+        syncWidgetText();
+        localizeLauncher();
       }
-
-      .smk-chat-launcher-orb {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-      }
-
-      .smk-chat-launcher-orb::before,
-      .smk-chat-launcher-orb::after {
-        content: "";
-        position: absolute;
-        inset: -4px;
-        border-radius: 50%;
-        pointer-events: none;
-      }
-
-      .smk-chat-launcher-orb::before {
-        background:
-          radial-gradient(circle at 50% 52%, rgba(255, 208, 102, 0.62) 0%, rgba(255, 208, 102, 0.22) 26%, rgba(255, 208, 102, 0) 60%),
-          conic-gradient(from 0deg, rgba(255, 209, 102, 0.08), rgba(255, 209, 102, 0.36), rgba(214, 40, 40, 0.2), rgba(255, 209, 102, 0.08));
-        filter: blur(9px);
-        opacity: 1;
-        animation: smkLauncherSpin 9s linear infinite;
-      }
-
-      .smk-chat-launcher-orb::after {
-        inset: 8px;
-        background:
-          radial-gradient(circle at 34% 24%, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0) 34%),
-          radial-gradient(circle at 50% 60%, rgba(255, 210, 120, 0.28), rgba(255, 210, 120, 0) 54%);
-        mix-blend-mode: screen;
-        filter: blur(3px);
-        animation: smkLauncherPulse 3.8s ease-in-out infinite;
-      }
-
-      .smk-chat-launcher-art {
-        position: relative;
-        z-index: 1;
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        pointer-events: none;
-        filter: drop-shadow(0 0 18px rgba(240, 165, 0, 0.36));
-      }
-
-      @keyframes smkLauncherSpin {
-        from {
-          transform: rotate(0deg) scale(0.98);
-        }
-        to {
-          transform: rotate(360deg) scale(1.02);
-        }
-      }
-
-      @keyframes smkLauncherPulse {
-        0%, 100% {
-          opacity: 0.62;
-          transform: scale(0.96);
-        }
-        50% {
-          opacity: 1;
-          transform: scale(1.04);
-        }
-      }
-
-      @keyframes smkLauncherFloat {
-        0%, 100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-2px);
-        }
-      }
-
-      @media (max-width: 960px) {
-        .smk-chat-launcher {
-          width: 94px !important;
-          height: 94px !important;
-          padding: 0 !important;
-          border: 0 !important;
-          border-radius: 50% !important;
-          background: transparent !important;
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.32) !important;
-          overflow: visible !important;
-          bottom: 88px !important;
-        }
-
-        .smk-chat-launcher::after {
-          content: "Вызов ассистента";
-          position: absolute;
-          left: 50%;
-          bottom: calc(100% + 8px);
-          transform: translateX(-50%);
-          padding: 7px 11px;
-          border-radius: 999px;
-          background: rgba(11, 13, 16, 0.94);
-          color: #f4f7fb;
-          border: 1px solid rgba(240, 165, 0, 0.24);
-          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
-          white-space: nowrap;
-          font-size: 12px;
-          font-weight: 600;
-          letter-spacing: 0.01em;
-          pointer-events: none;
-        }
-
-        .smk-chat-widget {
-          width: min(320px, calc(100vw - 24px)) !important;
-          max-width: min(320px, calc(100vw - 24px)) !important;
-          height: min(420px, calc(100vh - 180px)) !important;
-          max-height: min(420px, calc(100vh - 180px)) !important;
-          right: 12px !important;
-          left: auto !important;
-          bottom: 198px !important;
-          border-radius: 20px !important;
-        }
-
-        .smk-chat-header {
-          position: relative;
-          padding-right: 88px;
-        }
-
-        .smk-chat-mobile-close {
-          position: absolute;
-          top: 12px;
-          right: 12px;
-          border: 1px solid rgba(255, 255, 255, 0.18);
-          background: rgba(255, 255, 255, 0.08);
-          color: #f4f7fb;
-          border-radius: 999px;
-          padding: 6px 10px;
-          font-size: 12px;
-          font-weight: 600;
-          cursor: pointer;
-        }
-
-        .smk-chat-mobile-close:hover {
-          background: rgba(255, 255, 255, 0.14);
-        }
-
-        .smk-chat-launcher-orb-mobile {
-          position: relative;
-          display: block;
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-        }
-
-        .smk-chat-launcher-orb-mobile::before,
-        .smk-chat-launcher-orb-mobile::after {
-          content: "";
-          position: absolute;
-          border-radius: 50%;
-          pointer-events: none;
-        }
-
-        .smk-chat-launcher-orb-mobile::before {
-          inset: -3px;
-          background:
-            radial-gradient(circle at 50% 52%, rgba(255, 208, 102, 0.42) 0%, rgba(255, 208, 102, 0.12) 28%, rgba(255, 208, 102, 0) 62%),
-            conic-gradient(from 0deg, rgba(255, 209, 102, 0.04), rgba(255, 209, 102, 0.22), rgba(214, 40, 40, 0.12), rgba(255, 209, 102, 0.04));
-          filter: blur(6px);
-          animation: smkLauncherSpin 11s linear infinite;
-        }
-
-        .smk-chat-launcher-orb-mobile::after {
-          inset: 7px;
-          background:
-            radial-gradient(circle at 34% 24%, rgba(255, 255, 255, 0.32), rgba(255, 255, 255, 0) 34%),
-            radial-gradient(circle at 50% 60%, rgba(255, 210, 120, 0.2), rgba(255, 210, 120, 0) 54%);
-          filter: blur(2px);
-          animation: smkLauncherPulse 4.2s ease-in-out infinite;
-        }
-
-        .smk-chat-launcher-orb-mobile .smk-chat-launcher-art {
-          filter: drop-shadow(0 0 12px rgba(240, 165, 0, 0.26));
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
-    function initOverride() {
-      if (applyLauncherVariant()) {
-        ensureMobileCloseControl();
-        return;
-      }
-
-      const observer = new MutationObserver(function () {
-        if (applyLauncherVariant()) {
-          ensureMobileCloseControl();
-          observer.disconnect();
-        }
+      document.getElementById("language-select").addEventListener("change", (e) => {
+        currentLang = e.target.value;
+        localStorage.setItem("smk_site_lang", currentLang);
+        applyLanguage();
       });
-
+      mq.addEventListener("change", decorateWidget);
+      const observer = new MutationObserver(() => { if (decorateWidget()) observer.disconnect(); });
       observer.observe(document.body, { childList: true, subtree: true });
-    }
-
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", initOverride);
-    } else {
-      initOverride();
-    }
-
-    desktopMedia.addEventListener("change", applyLauncherVariant);
-
-    function ensureMobileCloseControl() {
-      const widget = document.querySelector(".smk-chat-widget");
-      const header = widget && widget.querySelector(".smk-chat-header");
-      if (!widget || !header || header.querySelector(".smk-chat-mobile-close")) return;
-
-      const closeBtn = document.createElement("button");
-      closeBtn.className = "smk-chat-mobile-close";
-      closeBtn.type = "button";
-      closeBtn.setAttribute("aria-label", "Скрыть чат");
-      closeBtn.textContent = "Скрыть";
-      closeBtn.addEventListener("click", function () {
-        widget.style.display = "none";
-      });
-
-      header.appendChild(closeBtn);
-    }
-  })();
-</script>
-
+      applyLanguage();
+      decorateWidget();
+    })();
+  </script>
 </body>
 </html>
